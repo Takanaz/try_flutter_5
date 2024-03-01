@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '261274341598',
     projectId: 'try-flutter-5',
     storageBucket: 'try-flutter-5.appspot.com',
+    iosClientId: '261274341598-4956mls6uhk2m3s2pht9vn6l1070q635.apps.googleusercontent.com',
     iosBundleId: 'com.example.tryFlutter5',
   );
 }
