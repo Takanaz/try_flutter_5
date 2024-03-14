@@ -79,7 +79,6 @@ class _SignInPageState extends State<SignInPage> {
           child: const Text('Sign in with Google'),
           onPressed: () async {
             signInWithGoogle();
-            print(FirebaseAuth.instance.currentUser?.displayName);
 
             if (mounted) {
               Navigator.of(context).pushAndRemoveUntil(
@@ -161,7 +160,7 @@ class _ChatPageState extends State<ChatPage> {
             },
             child: CircleAvatar(
               backgroundImage: NetworkImage(
-                FirebaseAuth.instance.currentUser!.photoURL!,
+                user!.photoURL!,
               ),
             ),
           )

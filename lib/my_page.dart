@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+
 import 'package:try_flutter_5/main.dart';
 
 class MyPage extends StatelessWidget {
@@ -40,6 +42,7 @@ class MyPage extends StatelessWidget {
                 onPressed: () async {
                   await GoogleSignIn().signOut();
                   await FirebaseAuth.instance.signOut();
+                  if (!context.mounted) return;
                   Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(builder: (context) {
                       return const SignInPage();
